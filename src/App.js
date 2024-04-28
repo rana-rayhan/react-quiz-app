@@ -1,13 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./styles/App.css";
-import Layout from "./layouts/Layout";
-import Signup from "./components/pages/Signup";
-import Home from "./components/pages/Home";
-import Result from "./components/pages/Result";
-import Quiz from "./components/pages/Quiz";
-import Login from "./components/pages/Login";
+
 import AuthProvider from "./contexts/AuthContext";
+import Home from "./components/pages/Home";
+import Layout from "./layouts/Layout";
+import Login from "./components/pages/Login";
+import Result from "./components/pages/Result";
+import Signup from "./components/pages/Signup";
+import Quiz from "./components/pages/Quiz";
 
 const App = () => {
   return (
