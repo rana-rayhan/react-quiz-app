@@ -29,7 +29,7 @@ const LoginForm = () => {
     } catch (err) {
       console.log(err);
       setLoading(false);
-      toast.error("Failed to create an account!");
+      toast.error("Failed to login!");
     }
   };
   return (
