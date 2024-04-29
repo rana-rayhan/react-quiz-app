@@ -9,6 +9,8 @@ import Login from "./components/pages/Login";
 import Result from "./components/pages/Result";
 import Signup from "./components/pages/Signup";
 import Quiz from "./components/pages/Quiz";
+import PrivateRoute from "./components/PrivateRoute";
+import PublicRoute from "./components/PublicRoute";
 
 const App = () => {
   return (
@@ -17,10 +19,14 @@ const App = () => {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/quiz" element={<Quiz />} />
-            <Route path="/result" element={<Result />} />
+            <Route path="/signup" element={<PublicRoute element={Signup} />} />
+            <Route path="/login" element={<PublicRoute element={Login} />} />
+
+            <Route path="/quiz/:id" element={<PrivateRoute element={Quiz} />} />
+            <Route
+              path="/result/:id"
+              element={<PrivateRoute element={Result} />}
+            />
           </Routes>
         </Layout>
       </AuthProvider>

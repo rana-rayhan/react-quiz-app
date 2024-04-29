@@ -3,7 +3,7 @@
 
 :root {
   --bodyBackground: #f2f4f8;
-  --successGreen: #00ff84;
+  --successGreen: #6b63ff;
   --dangerRed: #ffc0c7;
   --questionBG: #e4e8ee;
   --fontPrimary: #002333;
@@ -189,4 +189,21 @@ h4 {
 .wrong {
   background: var(--dangerRed) !important;
   font-weight: 600;
+}
+
+/* Video styles */
+.infinite-scroll-component {
+  width: 100%;
+  display: grid;
+  margin: 3rem auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  gap: 20px;
+  row-gap: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .infinite-scroll-component {
+    width: 90%;
+  }
 }

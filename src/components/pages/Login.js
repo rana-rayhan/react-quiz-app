@@ -6,7 +6,6 @@ import "../../styles/Auth-style.css";
 const Login = () => {
   return (
     <>
-      <h1>Login to your account</h1>
       <div className="column">
         <Illustratuon />
         <LoginForm />
